@@ -1,4 +1,4 @@
-# bootcamp python
+# bootcamp python - notes
 
 ### variable types - 5/8
 + there is not a keyword for constants:
@@ -99,3 +99,7 @@
       vkko"""
       ```
       the output will be exactly like the assigned string
+
+---
+
+### simple bank system challenge done - 4/6
