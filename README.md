@@ -1,6 +1,7 @@
 # bootcamp python - notes
 
 ### variable types - 5/8
+
 + there is not a keyword for constants:
   + the convention is to "declare" constants is to use full upper-case variables:
     + e.g., `SIZE = 10`
@@ -103,3 +104,35 @@
 ---
 
 ### simple bank system challenge done - 4/6
+
+---
+
+### lists - 4/6
+
++ lists can store any type of object - types can be mixed
+  + e.g., `array = ["vkko", 20, 1.65, True]`
+
++ can be created with list() constructor
+  + e.g., `numbers = list(range(10))` - list contains 0-9 numbers
+
++ accessing values by index:
+  + we can use negative indexes (-1 = last, -2 = second last, etc)
+    + e.g, `n = [1,2,3,4]` - n[-1] = 4
+
++ lists can have lists inside too (nested)
+  + matrix (2d list) is the same as `m = [[1,2],[3,4]]`
+    + accessing its values: m[1][0] = 3
+
++ slicing lists work just like on strings (theoretically, strings are lists, so actually it's the other way around)
+
++ iterating through lists: `for x in array:`
+  + with enumerate(array), we can get the index by passing another variable
+    + e.g., `for i, x in enumerate(array)`
+  + this is good for list comprehension (new list based on another list)
+    + e.g.,
+    ```
+    ns = [1,2,3,4,5]
+    ns2 = []
+    for n in ns:
+      ns2.append(n * 2)
+    ```
