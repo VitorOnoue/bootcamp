@@ -103,11 +103,11 @@
 
 ---
 
-### simple bank system challenge done - 4/6
+### simple bank system challenge done - 6/4
 
 ---
 
-### lists - 4/6
+### lists - 6/4
 
 + lists can store any type of object - types can be mixed
   + e.g., `array = ["vkko", 20, 1.65, True]`
@@ -136,3 +136,27 @@
     for n in ns:
       ns2.append(n * 2)
     ```
+
+#### continuing lists - 6/7
+
++ methods:
+  + `.append(x)` adds x at the end of the list
+    + e.g., `x = [] - x.append("vkko")`
+      + reminder: an element can be another list too
+
+  + `.clear()` empties the list
+
+  + `.copy()` creates a copy of the list (better to store it in a var)
+    + e.g, `x = [] - y = x.copy()`
+
+  + `.count(x)` returns how many x occurrences are in the list
+
+  + `.extend(list)` appends another list
+    + reminder: appending x to a list will treat x as an element (so, we will have nested lists)
+    + by using `.extend(x)`, we are appending all elements of x
+  
+  + `.index(x)` returns the index of the first x occurrence
+
+  + `.pop(n)` removes the element in n index
+    + if no n, default is -1, which is the last element
+      + so, `.pop()` works like a stack's pop
