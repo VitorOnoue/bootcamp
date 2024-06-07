@@ -160,3 +160,100 @@
   + `.pop(n)` removes the element in n index
     + if no n, default is -1, which is the last element
       + so, `.pop()` works like a stack's pop
+
+  + `.remove(x)` removes the first occurrence of x in the list
+
+  + `.reverse()` reverses the list (last element becomes first, etc)
+
+  + `.sort()` sorts the list - ascending
+    + with `reverse=True`, descending
+  
+  + `len(list)` returns the length of the list
+
+---
+
+### tuples - 6/7
+
++ tuples are similar to lists, but they are not mutable
+
++ to create a tuple, we can use either the tuple class, or parenthesis + commas
+  + e.g, `names = ("vkko", "kkov", "kovk",)` or `numbers = tuple[1, 2, 3, 4]`
+    + the last comma is to make sure the interpreter considers "names" as a tuple
+
++ tuples work the same way as lists, so, indexes, nesting, accessing, iterating, slicing, etc, are all equal
+
++ methods leftover: `.count(x)`, `.index(x)` and `len(tuple)`
+
+---
+
+### sets - 6/7
+
++ used for/remembers mathematics' sets
+
++ a set is a collection of data that contains no duplicates (removes duplicates)
+  + the elements inside of it are not sorted
+    + e.g., `x = set("vkko")` will leave only one 'k' + if you print x, it wont necessarily print "vko"
+
++ accessing data = transform the set into a list
+  + because there are no indexing and no slicing
+  + e.g, `x = {1, 2, 3, 4} - x = list(x) - print(x[0])`
+
++ iterating through sets is doable
+
++ methods:
+  + `.union(set)` just like in math, if x and y are sets, x.union(y) will x U y
+
+  + `.intersection(set)` x.intersection(y) will x U* y (thats how I used to write this symbol in my notes)
+
+  + `.difference(set)` inverse of `.intersection()`
+    + if x.difference(y), it gets of x what is not inside of y
+      + e.g, if x = {1,2,3} and y = {3,4,5}, x.difference(y) = {1,2}
+    + `.symmetric_difference` gets both sides' differences
+  
+  + `.issubset(set)` if x and y are sets, x.issubset(y) returns true if x is inside y
+    + `.issuperset(set)` is the exact contrary of this (true if x contains y)
+
+  + `.isdisjoint(set)` if x and y are sets, x.isdisjoint(y) returns true if x has no equal elements with y
+
+  + `.add(e)` adds e, if not exists already
+
+  + `.clear(set)` empties the set
+
+  + `.copy(set)` just like in lists, will copy the set
+
+  + `.discard(e)` removes e from the set, if exists
+
+  + `.pop()` removes the first element of the set (not the last like in a list)
+
+  + `.remove(e)` just like discard, but returns an error if e is not inside the set
+
+  + `len(set)` length of the set
+
+  + `e in set` returns true if e is inside set
+
+---
+
+### dictionaries - 6/7
+
++ key:value list, keys are unique
+
++ created with {}, filled with 'key:value's, or the class dict
+  + e.g, `person = {"name": "vkko", "age": 20}` or `person = dict(nome="vkko", idade=20)`
+
++ to add a new key:value in a dict = dict["key"] = "value"
+  + e.g, `person[number] = "11 98765-4321"`
+
++ iterating through dicts with for:
+  + with one argument, gets the key
+    + e.g.,
+    ```
+    for key in person:
+      print(key, person[key])
+    ```
+  + with two arguments and using `.items()`, we get both key and value
+    + `dict.items()` returns a list of tuples
+    + e.g.,
+    ```
+    for key, value in person.items():
+      print(key, value)
+    ```
