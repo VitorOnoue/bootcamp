@@ -103,9 +103,7 @@
 
 ---
 
-### simple bank system challenge done - 6/4
-
----
+## simple bank system challenge done - 6/4
 
 ### lists - 6/4
 
@@ -130,12 +128,12 @@
     + e.g., `for i, x in enumerate(array)`
   + this is good for list comprehension (new list based on another list)
     + e.g.,
-    ```
-    ns = [1,2,3,4,5]
-    ns2 = []
-    for n in ns:
-      ns2.append(n * 2)
-    ```
+      ```
+      ns = [1,2,3,4,5]
+      ns2 = []
+      for n in ns:
+        ns2.append(n * 2)
+      ```
 
 #### continuing lists - 6/7
 
@@ -246,14 +244,53 @@
 + iterating through dicts with for:
   + with one argument, gets the key
     + e.g.,
-    ```
-    for key in person:
-      print(key, person[key])
-    ```
+      ```
+      for key in person:
+        print(key, person[key])
+      ```
   + with two arguments and using `.items()`, we get both key and value
     + `dict.items()` returns a list of tuples
     + e.g.,
-    ```
-    for key, value in person.items():
-      print(key, value)
-    ```
+      ```
+      for key, value in person.items():
+        print(key, value)
+      ```
+
+---
+
+### functions - 6/10
+
++ syntax: `def function(parameters)`
+  + by assigning a value to a parameter, you actually set ups its default value
+    + e.g., `def vkko(name="vkko")` - if name is not received, then, name will be vkko
+    + if the argument is not sent and there is no default, then error
+
++ calling the function: `function(parameters)`
+  + e.g, `vkko("vitor")`
+
++ ofc, you can set the return with `return` just like in all languages
+  + functions return None by default
+  + functions can return more than multiple values (in a tuple)
+    + e.g.,
+      ```
+      def pred_succ(n):
+        pred = n - 1
+        succ = n + 1
+        return pred, succ
+      ```
+
++ functions can also be called with key:value arguments
+  + e.g., `vkko(name="vitor")`
+    + may use dicts for this: `vkko(**{"name": "vitor"})`
+
++ *args and **kwargs parameters:
+  + *args stores the arguments (that are not key:value) in a tuple
+    + e.g., `def vkko(*args)`
+      + if `vkko("vitor", "onoue")`, args will contain ("vitor", "onoue")
+  + **kwargs stores the arguments in dictionary
+
++ / and * inside the parameters in a function:
+  + all parameters before / wont be able to get key:value arguments
+    + e.g, `def vkko(name, /)` - this will return an error: `vkko(name="vitor")`
+
+## bank system improvement challenge done - 
