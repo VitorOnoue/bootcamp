@@ -293,4 +293,25 @@
   + all parameters before / wont be able to get key:value arguments
     + e.g, `def vkko(name, /)` - this will return an error: `vkko(name="vitor")`
 
-## bank system improvement challenge done - 
+## bank system improvement challenge done - 6/12
+
+### OOP - 6/16
+
++ programming paradigms refers to the way (thought process, etc) a code is designed to solve a problem
+
++ examples:
+  + imperative/procedural
+  + functional
+  + event-driven
+  + object-oriented
+
++ object-oriented programming (OOP): code works around objects
+  + **classes and objects** are its key concepts
+
+#### classes and objects
+
++ a class defines its characteristics and "what actions the class can perform"
+  + the class itself "is just the settings/rules"
+
++ an object is something generated from a class
+  + the object that is capable of performing the actions itself and contains its characteristics
