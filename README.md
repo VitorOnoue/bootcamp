@@ -308,10 +308,27 @@
 + object-oriented programming (OOP): code works around objects
   + **classes and objects** are its key concepts
 
-#### classes and objects
+#### classes and objects - 6/16
 
 + a class defines its characteristics and "what actions the class can perform"
   + the class itself "is just the settings/rules"
 
 + an object is something generated from a class
   + the object that is capable of performing the actions itself and contains its characteristics
+
++ good analogy: house plan and the furnitures
+
+## first OOP program (oop.py) - 6/17
+
+### constructors and destructors - 6/17
+
++ the constructor method will always be run whenever an instance is created
+  + a constructor initializes/starts an object
+  + to declare a constructor, create a method called \_\_init\_\_
+
++ the destructor method will always be run whenever an instance is destroyed (to destroy it, need to call a method)
+  + they are not as needed though, python can manage memory by itself
+    + the garbage collector will destroy the object after the end of the program
+    + not the case in C and C++
+  + to declare a destructor, create a method called \_\_del\_\_
+    + to call it: `del object`
