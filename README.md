@@ -308,7 +308,7 @@
 + object-oriented programming (OOP): code works around objects
   + **classes and objects** are its key concepts
 
-#### classes and objects - 6/16
+### OOP - classes and objects - 6/16
 
 + a class defines its characteristics and "what actions the class can perform"
   + the class itself "is just the settings/rules"
@@ -320,7 +320,7 @@
 
 ## first OOP program (oop.py) - 6/17
 
-### constructors and destructors - 6/17
+### OOP - constructors and destructors - 6/17
 
 + the constructor method will always be run whenever an instance is created
   + a constructor initializes/starts an object
@@ -332,3 +332,9 @@
     + not the case in C and C++
   + to declare a destructor, create a method called \_\_del\_\_
     + to call it: `del object`
+
+### OOP - inheritance - 6/18
+
++ inheritance is the concept of inheriting/retaining characteristics (variables) and methods from a class to a new one
+  + this saves time, no need to write the same code again for another class
+  + it allows you to add more characteristics/methods, with no changes to the main class
