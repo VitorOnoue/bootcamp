@@ -333,8 +333,38 @@
   + to declare a destructor, create a method called \_\_del\_\_
     + to call it: `del object`
 
-### OOP - inheritance - 6/18
+### OOP's 4 pillars: inheritance - 6/18
 
 + inheritance is the concept of inheriting/retaining characteristics (variables) and methods from a class to a new one
   + this saves time, no need to write the same code again for another class
   + it allows you to add more characteristics/methods, with no changes to the main class
+
++ syntax: `class Y(X): ` - means Y inherits from X
+
++ single vs multiple inheritance = amount of "parent" classes
+  + multiple inheritance: `class Z(X, Y)`
+
+## hands-on inheritance - 6/20
++ super() allows you to call methods, constructors, etc from the "parent" class
++ kwargs for multiple inheritance
++ \_\_mro\_\_ = method resolution order
+  + `Class.__mro__` returns the order in which the "child" class searches the "parent" classes
++ order matters:
+  + if class Z() is inheriting from classes X() and Y(), in this order, and both classes have a method called vkko(), z() will inherit X's method
+    + of course, if Z() is not overriding the method itself
+
+---
+
+### OOP's four pillars: encapsulation - 6/20
+
++ encapsulation is the concept of protecting/restricting the object's data from being accessed
+  + imagine a project with 10 different files, and somehow one of the variables is having its value changed
+    + to find out which snippet of code is causing the issue will be mental and time consuming
+  + "a variable can only be assigned another value by a method"
+
++ there are no access modifiers (java's public, private, protected) in python, just naming conventions
+  + public: can be accessed outside of the class
+  + private: only accessed by the class itself
+
++ convention: unless the variable starts with _, they are all public
+  + if it starts with _, it should be considered private
