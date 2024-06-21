@@ -8,14 +8,18 @@ class Account:
     def withdraw(self, value):
         self._balance -= value
 
-    def get_balance(self):
+    @property
+    def balance(self):
         return self._balance
+    
+    @balance.setter
+    def balance(self, value):
+        self._balance = value
+
 
 account = Account(100)
-# wrong thing to do:
+# wrong thing to do (if no properties):
 account._balance += 100
 print(account._balance)
-
-# correct thing to do
-account.deposit(100)
-print(account.get_balance())
+account.balance = 20
+print(account._balance)

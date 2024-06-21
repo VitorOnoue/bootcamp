@@ -308,6 +308,8 @@
 + object-oriented programming (OOP): code works around objects
   + **classes and objects** are its key concepts
 
+---
+
 ### OOP - classes and objects - 6/16
 
 + a class defines its characteristics and "what actions the class can perform"
@@ -317,6 +319,8 @@
   + the object that is capable of performing the actions itself and contains its characteristics
 
 + good analogy: house plan and the furnitures
+
+---
 
 ## first OOP program (oop.py) - 6/17
 
@@ -333,6 +337,8 @@
   + to declare a destructor, create a method called \_\_del\_\_
     + to call it: `del object`
 
+---
+
 ### OOP's 4 pillars: inheritance - 6/18
 
 + inheritance is the concept of inheriting/retaining characteristics (variables) and methods from a class to a new one
@@ -343,6 +349,8 @@
 
 + single vs multiple inheritance = amount of "parent" classes
   + multiple inheritance: `class Z(X, Y)`
+
+---
 
 ## hands-on inheritance - 6/20
 + super() allows you to call methods, constructors, etc from the "parent" class
@@ -368,3 +376,37 @@
 
 + convention: unless the variable starts with _, they are all public
   + if it starts with _, it should be considered private
+
+#### properties - 6/21
+
++ TLDR, @property for get methods, @variable.setter for set methods, @variable.deleter to destroy variables
+
+---
+
+### OOP'S four pillars: polymorphism - 6/21
+
++ polymorphism is the concept of allowing a function/method to have a single name, but do different things according to the way its being called
+  + the function len is a good example: if it receives a single string, it returns the size of that string - if it receives a list of numbers, it returns the amount of numbers on the list
+
++ depends of inheritance - no inheritance = no true polymorphism
+
+---
+
+### class variables vs instance variables - 6/21
+
++ by assigning a value to a variable in the class' scope, all instances created will contain that variable/value
+
+---
+
+### class methods and static methods - 6/21
+
++ class methods are tied to the class, not the object/instance
+  + first parameter points to the class
+  + class methods are usually used to create factory methods (methods that create instances)
+
++ static methods are also tied to the class, but cant access the class itself
+  + no parameter pointing to the class
+  + are inside of a class because "it makes sense"
+  + e.g., a method called `is_empty(list)` that checks if a given list is empty
+
++ for better understanding, check methods/classes.py
