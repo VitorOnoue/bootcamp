@@ -410,3 +410,20 @@
   + e.g., a method called `is_empty(list)` that checks if a given list is empty
 
 + for better understanding, check methods/classes.py
+
+---
+
+### interfaces - 6/24
+
++ they define what a class __should__ do
+  + e.g., if there is an abstract method in a "parent" class, the "child" class must implement the method itself too
+  + for better understanding, check methods/abstracts.py
+
++ interfaces = contracts, in which we declare methods - python uses abstract classes to define contracts
+  + abstract classes cant be instantiated
+
++ as is, python has no abstract classes - a module called abc is used instead
+  + abc stands for abstract base class
+  + a method is abstract if it has the `@abstractmethod` decorator
+
++ its possible to set a property as abstract too, combining `@property` with `@abstractproperty`
