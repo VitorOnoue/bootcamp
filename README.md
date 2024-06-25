@@ -431,3 +431,20 @@
 ---
 
 ## bank system improvement challenge #2 somewhat done (needed help) - 6/24
+
+### decorators - 6/25
+
++ it is possible to pass a function as argument (just like if it was a variable)
+  + e.g, by calling function1() in the code below, either vkko or xyz passed as arguments would work
+    ```
+    def function1(function2, value):
+      return function2(value)
+
+    def vkko(x):
+      print("x equals what")
+
+    def xyz(x):
+      print(x)
+    ```
+
++
