@@ -293,7 +293,7 @@
   + all parameters before / wont be able to get key:value arguments
     + e.g, `def vkko(name, /)` - this will return an error: `vkko(name="vitor")`
 
-## bank system improvement challenge done - 6/12
+## bank system improvement #1 challenge done - 6/12
 
 ### OOP - 6/16
 
@@ -427,3 +427,7 @@
   + a method is abstract if it has the `@abstractmethod` decorator
 
 + its possible to set a property as abstract too, combining `@property` with `@abstractproperty`
+
+---
+
+## bank system improvement challenge #2 somewhat done (needed help) - 6/24

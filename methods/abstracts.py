@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod, abstractproperty # importing abc module
+from abc import ABC, abstractmethod # importing abc module
 
 class Remote(ABC): # inheriting/extending from abc
     # both on and off must be implemented in a child class
@@ -11,7 +11,7 @@ class Remote(ABC): # inheriting/extending from abc
         pass
 
     @property
-    @abstractproperty
+    @abstractmethod
     def brand(self):
         pass
 
