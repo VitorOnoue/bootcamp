@@ -447,4 +447,30 @@
       print(x)
     ```
 
-+
++ inner functions = its possible to create functions inside functions
+  + e.g,
+    ```
+    def parent():
+      def child1():
+        print(1)
+
+      def child2():
+        print(2)
+      
+      child1()
+      child2()
+    ```
+    + (using the example above) its also possible to return functions from a function:
+      ```
+      def parent(x):
+        def child1():
+          print(1)
+
+        def child2():
+          print(2)
+
+        if x == 1:
+          return child1
+        else:
+          return child2
+      ```
