@@ -474,3 +474,6 @@
         else:
           return child2
       ```
+  + ofc that, its not possible to call an inner function outside of the outer (scope)
+
++ @ allows the usage of decorators more easily (check dec_ite_ger/4_1st_decorator.py for better understanding)
