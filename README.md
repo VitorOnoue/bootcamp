@@ -477,3 +477,9 @@
   + ofc that, its not possible to call an inner function outside of the outer (scope)
 
 + @ allows the usage of decorators more easily (check dec_ite_ger/4_1st_decorator.py for better understanding)
+
+#### continuing decorators - 6/30
+
++ *args and **kwargs are used to pass more arguments to the inner
+
++ check 5_decorator_args.py for returning values understanding
