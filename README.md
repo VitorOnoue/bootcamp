@@ -476,10 +476,31 @@
       ```
   + ofc that, its not possible to call an inner function outside of the outer (scope)
 
-+ @ allows the usage of decorators more easily (check dec_ite_ger/4_1st_decorator.py for better understanding)
++ @ allows the usage of decorators more easily (check dec_ite_gen/4_1st_decorator.py for better understanding)
 
 #### continuing decorators - 6/30
 
 + *args and **kwargs are used to pass more arguments to the inner
 
-+ check 5_decorator_args.py for returning values understanding
++ its possible to return values using decorators (check dec_ite_gen/5_decorator_args.py)
+
+---
+
+### iterators - 6/30
+
++ iterators are objects that can be iterated, simple as that
+
++ to create a iterator, two methods are needed: `__iter__()` and `__next__()`
+
++ its used to read files, for example
+  + check dec_ite_gen/6_iterators.py for a code example
+
+---
+
+### generators - 6/30
+
++ generators are special iterators that dont store all values in memory
+
++ generators are created just like a normal function, but use `yield` instead of `return`
+  + yield basically returns the value, just like `return` does, but it goes back to the function to finish the execution
+    + check dec_ite_gen/7_generators.py for better understanding
