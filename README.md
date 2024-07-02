@@ -504,3 +504,29 @@
 + generators are created just like a normal function, but use `yield` instead of `return`
   + yield basically returns the value, just like `return` does, but it goes back to the function to finish the execution
     + check dec_ite_gen/7_generators.py for better understanding
+
+---
+
+### datetimes - 7/2
+
++ datetime module contains a lot of classes related to time
+  + code snippet example (output would be 2024-07-02):
+    ```
+    import datetime
+    print(datetime.date(2024, 7, 2))
+    ```
+  + `date.date(year, month, day)` returns the date in yyyy-mm-dd format
+    + by using `.today()`, it returns the date atm of the execution
+      + e.g, `date.date.today()` would return 2024-07-02
+  + `time.time(hour, minute, second, ms)` returns the time in hh-mm-ss.ms format
+    + ms is not required, and wont be displayed if not passed
+  + `datetime.datetime(year, month, day, hour, minute, second, ms)` returns the date time in yyyy-mm-dd hh:mm:ss.ms format
+    + only year, month and day are required - time will be all 0s, without ms
+    + `.today()` also applies for datetime
+  
++ manipulating those objects = `timedelta()`
+  + with timedelta, its possible to add/subtract __datetimes__
+    + doesnt work with __times__
+    + check datetime/2_timedelta.py for example
+
++ with a datetime object, its possible to get both date and/or time separately, by using `.date()` and `.time()`
