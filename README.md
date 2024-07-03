@@ -530,3 +530,6 @@
     + check datetime/2_timedelta.py for example
 
 + with a datetime object, its possible to get both date and/or time separately, by using `.date()` and `.time()`
+
++ `strftime` to format time objects, `strptime` to parse/convert
+  + check datetime/3_strfstrp for better understanding
