@@ -533,3 +533,14 @@
 
 + `strftime` to format time objects, `strptime` to parse/convert
   + check datetime/3_strfstrp for better understanding
+
+---
+
+### timezones
+
++ pytz module for timezones (couldnt run the code) - check datetime/4_pytz.py
+
++ its doable with datetime module, but its not as easy as with pytz module - check datetime/5_timezone.py
+
+---
+
