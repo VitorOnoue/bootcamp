@@ -33,8 +33,7 @@ class Cliente:
         self.indice_conta = 0
 
     def realizar_transacao(self, conta, transacao):
-        data = date.today()
-        if conta.historico.transacoes_do_dia(data) >= 10:
+        if conta.historico.transacoes_do_dia() >= 2:
             print("\n@@@ Você excedeu o número de transações permitidas para hoje! @@@")
         else:
             transacao.registrar(conta)
@@ -170,15 +169,16 @@ class Historico:
             if tipo_transacao is None or transacao["tipo"].lower() == tipo_transacao.lower():
                 yield transacao
 
-    # TODO: filtrar todas as transações realizadas no dia
-    def transacoes_do_dia(self, data):
-        count = 0
+    def transacoes_do_dia(self):
+        data = date.today()
+        qtd_transacoes = 0
         for transacao in self.transacoes:
             transfer_date = datetime.strptime(transacao["data"], "%d-%m-%Y %H:%M:%S").date()
             if data == transfer_date:
-                count += 1
-        print("transacoes =", count)
-        return count
+                qtd_transacoes += 1
+        return qtd_transacoes
+    
+
 class Transacao(ABC):
     @property
     @abstractproperty
@@ -313,7 +313,7 @@ def exibir_extrato(clientes):
     tem_transacao = False
     for transacao in conta.historico.gerar_relatorio():
         tem_transacao = True
-        extrato += f"\n{transacao['tipo']}:\n\tR$ {transacao['valor']:.2f}"
+        extrato += f"\n{transacao['tipo']}:\n\tR$ {transacao['valor']:.2f}\n\tData e horário: {transacao['data']}"
 
     if not tem_transacao:
         extrato = "Não foram realizadas movimentações"

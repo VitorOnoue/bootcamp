@@ -536,7 +536,7 @@
 
 ---
 
-### timezones
+### timezones - 7/3
 
 + pytz module for timezones (couldnt run the code) - check datetime/4_pytz.py
 
@@ -544,3 +544,4 @@
 
 ---
 
+## bank system improvement challenge #4 (timezones) done - 7/3
