@@ -545,3 +545,92 @@
 ---
 
 ## bank system improvement challenge #4 (timezones) done - 7/3
+
+### working with files - 7/6
+
++ to work with files, we need to open them first, of course
+  + to open a file, use open()
+
++ its important to close a file after we are done using it
+  + to close a file, use close()
+
++ example:
+  
+  file = open("vkko.txt", "r")
+  # work with the file
+  file.close()
+  
+
++ opening methods:
+  + r = read, error if file _doesnt_ exist
+  + a = append, creates the file if it _doesnt_ exist
+  + w = writing, creates the file if it _doesnt_ exist
+  + x = create, error if file _already_ exists
+
+  #### reading methods
+    + .read(), returns a string with the entire content of the file
+    + .readline(), returns a string with a single line of the file
+    + .readlines() returns an array of strings, each string being a line of the file
+    + check files/read.py for an example
+
+  #### writing methods
+    + .write() - writes a string in the file
+    + .writelines() - writes an array of strings in the file
+    + important: its our responsibility to break rows, add tabs, etc to the writing (with \n, \t, etc)
+    + check files/write.py for an example
+
+---
+
+### managing files and directories - 7/6
+
++ with the modules os and shutil, its possible to manage files and directories
+  + create directory, rename/remove file, move file, etc
+
++ tip: use Path from pathlib, to take care of file paths
+
++ check files/os_shutil.py for an example
+
+---
+
+### exceptions when working with files - 7/6
+
++ its important to take care of errors, you know
+
++ python offers a bunch of exceptions
+  + FileNotFoundError
+  + PermissionError
+  + IOError
+  + UnicodeDecodeError
+  + UnicodeEncodeError
+  + IsADirectoryError
+
++ check files/exceptions.py for examples and better understanding
+
+---
+
+### working with files etiquette/good manners - 7/6
+
++ use keyword with, tldr its safer
+  + code example: with open("file.txt", "r") as file
+
++ make sure the file was opened correctly before any operation involving it
+
++ make sure to use the correct encoding
+  + its possible to add a third argument in open(), specifying the encoding
+
++ check files/etiquette.py for examples
+
+---
+
+### working with .csv files
+
++ fun fact: csv means comma separated values
+
++ python has a module called csv, to handle with csv files
+
++ etiquette/good manners:
+  + use csv.reader and csv.writer to work with .csv files (its possible to use the normal ones, but just dont)
+  + exception handling
+  + argument newline=" in the open() method when writing .csv files (just did it without it, and the file had two break rows between each data rows)
+
++ check files/csv.py for examples and better understanding
