@@ -555,17 +555,17 @@
   + to close a file, use close()
 
 + example:
-  
+  ```
   file = open("vkko.txt", "r")
   # work with the file
   file.close()
-  
+  ```
 
 + opening methods:
-  + r = read, error if file _doesnt_ exist
-  + a = append, creates the file if it _doesnt_ exist
-  + w = writing, creates the file if it _doesnt_ exist
-  + x = create, error if file _already_ exists
+  + r = read, error if file __doesnt__ exist
+  + a = append, creates the file if it __doesnt__ exist, appends new content to the file
+  + w = writing, creates the file if it __doesnt__ exist, erases the content if __already__ existed
+  + x = create, error if file __already__ exists
 
   #### reading methods
     + .read(), returns a string with the entire content of the file
@@ -634,3 +634,21 @@
   + argument newline=" in the open() method when writing .csv files (just did it without it, and the file had two break rows between each data rows)
 
 + check files/csv.py for examples and better understanding
+
+## bank system improvement challenge #5 (files) done - 7/8
+
+### etiquette - PEP8 - 7/8
+
++ PEP8 stands for Python Enhancement Proposal 8, which is a guide for coding etiquette in python
+
++ whats important that is in PEP8:
+  + 4 spaces for indentation
+  + max 79 characters per line/row
+  + snake_case for variables and functions, CamelCase for classes
+
++ tips:
+  + use tools that check coding styles (linters), e.g., flake8
+  + use tools that format your code (formatter), e.g., black
+  + use tools to sort the imports of your code, e.g., isort
+  + just `pip install (tool)` and `(tool) file.py`, with those examples above
+  + depending on ides and text editor, the above tools are already implemented
