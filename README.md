@@ -653,4 +653,16 @@
   + just `pip install (tool)` and `(tool) file.py`, with those examples above
   + depending on ides and text editor, the above tools are already implemented
 
-  
+---
+
+### python-database - 7/14
+
++ check connect/connection.py
+  + the file contains a connection to a database, simple CRUD and insert operations
+  + in sqlite3, its possible to transform the SELECT return type (tuple) to a `row` type
+    + then, its possible to transform row to dictionary with `dict()`
+    + done with `cursor.row_factory = sqlite3.Row`
+
++ etiquette: dont concatenate strings in queries, prone to sql injection
+
++ use try except, with `connection.rollback()` at the exception side
