@@ -652,3 +652,29 @@
   + use tools to sort the imports of your code, e.g., isort
   + just `pip install (tool)` and `(tool) file.py`, with those examples above
   + depending on ides and text editor, the above tools are already implemented
+
+---
+
+## end of python
+
+### mongodb operators - 7/13
+
++ logicals:
+  + $and - e.g.: `{$and: [{"name": "vkko"}, {"age": 20}]}`
+    + using a comma inside the same {} does the same - e.g.: `{"name": "vkko", "age": 20}`
+  + $or - e.g.: `{$or: [{"name": "vkko"}, {"age": 20}]}`
+  + $not - e.g.: `{"name": {$not:"vkko"}}`
+
++ comparison:
+  + $eq, equal, same as == - doesnt need to be used, as `{"name": "vkko"}` is already an equal comparison
+  + $ne, not equal, same as !=
+  + $gt, greater than, same as > - e.g.: `{"age": {$gt:19}}`
+  + $gte, greater than / equal, same as >=
+  + $lt, less than, same as <
+  + $lte, less than / equal, same as <=
+  + $in, returns everything that __contains__ one of the values inside the array - e.g.: `{"age": {$in: [18, 19, 20]}}`
+  + $nin, returns everything that __doesnt contain__ any values inside the array - same structure as $in
+
++ project: choose which fields will be returned
+
++ sort: 1 returns ascending, -1 returns descending
